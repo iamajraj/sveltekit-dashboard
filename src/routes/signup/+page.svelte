@@ -26,6 +26,7 @@
 		const validationResult = schema.safeParse(formData);
 		console.log(validationResult);
 		if (validationResult.success) {
+			errors = null;
 			formLoading = true;
 			try {
 				const res = await fetch('https://fakestoreapi.com/users', {
